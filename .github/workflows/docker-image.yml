@@ -25,10 +25,12 @@ jobs:
     - name: Construir imagen de docker
       run: |
         docker build -t epsilon88/docker-graphql:0.0.2 .
+        docker build -t epsilon88/docker-graphql:latest .
 
     - name: Sube la imagen de docker
       run: |
         docker push epsilon88/docker-graphql:0.0.2
+        docker push epsilon88/docker-graphql:latest
         
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
